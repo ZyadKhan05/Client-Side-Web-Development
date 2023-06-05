@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page of Khan's Cookies</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+    </head>
+    <h1>
+        <p id="header">Khan's Cookies</p>
+        <p style="text-align:center ;">The best tasting cookies that are straight fresh out of the oven!</p>
+        <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2017/07/1C5A8967.jpg" class="largeimg" id="image" onmouseover="mouseOverImage();" onmouseout="mouseOutImage();" >
+    </h1>
+    <br>
+
+    <body style="background-color:#C2CAD0;">
+
+        <div class="promisesdiv" id="myDiv" onclick="colorDiv()">
+        <h2>
+           <p>Khan's Promises</p> 
+            <ul id="myList" style="text-align: left;">
+                <li class="list"><em>All</em> of our cookies are freshly baked</li>
+                <li class="list">Every ingredient that we use is <strong>100% natural</strong></li>
+                <li class="list">All our cookies are made with love</li>
+                <li class="list">Our cookies guarantee smiles for a lifetime (not guaranteed)</li>
+            </ol>
+        </h2>
+        </div>
+
+       
+
+        <h3 class="table">
+            <img src="https://static.vecteezy.com/system/resources/previews/003/789/380/original/homemade-oatmeal-cookie-with-chocolate-crumb-flat-style-traditional-chocolate-chip-cookie-for-logo-sticker-print-recipe-menu-package-bakery-design-and-decoration-vector.jpg" alt="cookies" class="smallimg">
+            <button class="button" onclick="button();">View our Cookies</button> <br>
+            <table style="width:100%;" id="myTable">
+
+                </caption>
+                    <tr>
+                        <th onclick="sortTable(0)">Cookie</th>
+                        <th onclick="sortTable(1)">Price</th>
+                        <th onclick="sortTable(2)">Calories</th>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>Chocolate Chip</td>
+                    <td>$6 per dozen</td>
+                    <td>78 calories per cookie</td>
+                </tr>
+                <tr>
+                    <td>Oatmeal Raisin Cookie</td>
+                    <td>$8 per dozen</td>
+                    <td>65 calories per cookie</td>
+                </tr>
+                <tr>
+                    <td>Snickerdoodle</td>
+                    <td>$10 per dozen</td>
+                    <td>90 calories per cookie</td>
+                </tr>
+                <tr>
+                    <td>Gingersnaps</td>
+                    <td>$3 per dozen</td>
+                    <td>29 calories per cookie</td>
+                </tr>
+            </table>
+            <br>
+            
+        </h3>
+
+        <div class="historydiv" id="myDiv2" onclick="colorDiv2()">
+            <h5>
+                <p> The History of Cookies:
+                    <a href="https://en.wikipedia.org/wiki/Cookie" target="_blank" onclick="pop_up();">Do you want to learn about the history of the cookie? Click here!</a>
+                </p>
+            </h5>
+        </div>
+
+        <div class="container">
+            <h2>Leave us a comment below!</h2>
+            <form>
+                <textarea id="" placeholder="Leave a message..." value=""></textarea>
+                <div class="btn">
+                    <input id="submitBtn" type="submit" value="Comment" >
+                    <button id="clearBtn" type="reset">&#10060;</button>
+                </div>
+            </form>
+        </div>
+        <div style="background-color: #F6F6F8; width: 33%; height: auto;" class="comments" >
+            <h2>Comments Section</h2>
+            <div id="comment-box">
+            </div>
+        </div>
+    <br><br><br>
+    </body>
+    <hr id="digitalClock">
+</html>
