@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-color: white ;
+        }
+
+        h2 {
+            margin: 20px auto 80px;
+            font-size: 38px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+
+        details {
+            width: 75%;
+            min-height: 5px;
+            max-width: 700px;
+            padding: 45px 70px 45px 45px;
+            margin: 0 auto;
+            position: relative;
+            font-size: 22px;
+            border: 1px solid orange;
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: all .3s;
+        }
+
+        details + details {
+            margin-top: 20px;
+        }
+
+        details[open] {
+            min-height: 50px;
+            background-color: lightgray;
+            box-shadow: 1px 1px 10px white;
+        }
+
+        details p {
+            color: black ;
+            font-weight: 300;
+        }
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        summary:focus {
+            outline: none;
+
+        }
+
+        summary:focus::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 0 5px orange;
+        }
+
+        summary::-webkit-details-marker {
+            display: none
+        }
+
+        .control-icon {
+            fill: orange;
+            transition: .3s ease;
+            pointer-events: none;
+        }
+
+        .control-icon-close {
+            display: none;
+        }
+
+        details[open] .control-icon-close {
+            display: initial;
+            transition: .3s ease;
+        }
+
+        details[open] .control-icon-expand {
+            display: none;
+        }
+        .site-footer
+        {
+            background-color:#33353d;
+            padding:45px 0 20px;
+            font-size:15px;
+            line-height:24px;
+            color:white;
+        }
+        .site-footer hr
+        {
+            border-top-color:#bbb;
+            opacity:0.5
+        }
+        .site-footer hr.small
+        {
+            margin:20px 0
+        }
+        .site-footer h6
+        {
+            color:white;
+            font-size:16px;
+            text-transform:uppercase;
+            margin-top:5px;
+            letter-spacing:2px
+        }
+        .site-footer a
+        {
+            color:white;
+        }
+        .site-footer a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:none
+        }
+        .footer-links li
+        {
+            display:block
+        }
+        .footer-links a
+        {
+            color:white;
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color: white;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block
+        }
+        .site-footer .social-icons
+        {
+            text-align:right
+        }
+        .site-footer .social-icons a
+        {
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:6px;
+            margin-right:0;
+            border-radius:100%;
+            background-color: grey;
+        }
+        .copyright-text
+        {
+            margin:0
+        }
+        @media (max-width:991px)
+        {
+            .site-footer [class^=col-]
+            {
+                margin-bottom:30px
+            }
+        }
+        @media (max-width:767px)
+        {
+            .site-footer
+            {
+                padding-bottom:0
+            }
+            .site-footer .copyright-text,.site-footer .social-icons
+            {
+                text-align:center
+            }
+        }
+        .social-icons
+        {
+            padding-left:0;
+            margin-bottom:0;
+            list-style:none
+        }
+        .social-icons li
+        {
+            display:inline-block;
+            margin-bottom:4px
+        }
+        .social-icons li.title
+        {
+            margin-right:15px;
+            text-transform:uppercase;
+            color:white;
+            font-weight:700;
+            font-size:13px
+        }
+        .social-icons a{
+            background-color:#eceeef;
+            color:white;
+            font-size:16px;
+            display:inline-block;
+            line-height:44px;
+            width:44px;
+            height:44px;
+            text-align:center;
+            margin-right:8px;
+            border-radius:100%;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+        {
+            color:#fff;
+            background-color:#29aafe
+        }
+        .social-icons.size-sm a
+        {
+            line-height:34px;
+            height:34px;
+            width:34px;
+            font-size:14px
+        }
+        .social-icons a.facebook:hover
+        {
+            background-color:#3b5998
+        }
+        .social-icons a.twitter:hover
+        {
+            background-color:#00aced
+        }
+        .social-icons a.linkedin:hover
+        {
+            background-color:#007bb6
+        }
+        .social-icons a.fa-instagram:hover
+        {
+            background-color:#ea4c89
+        }
+        @media (max-width:767px)
+        {
+            .social-icons li.title
+            {
+                display:block;
+                margin-right:0;
+                font-weight:600
+            }
+        }
+
+        .dark-mode {
+            background-color: #1d1d1d;
+            color: orange;
+        );
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+</head>
+
+<header>
+    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light" style="background: #e3f2fd;">
+        <a class="navbar-brand" href="index.html" style="font-size: 28px">
+            <img src="https://michiganhr.org/wp-content/uploads/2015/01/insert-logo-375x360.png" alt="Logo" style="width:55px;">
+            &nbsp; Attorney's Website
+        </a>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <button class="btn btn-secondary btn-sm " onclick="myFunction()">Dark Mode</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="navbar-nav ml-auto">
+                <ul class="list-group list-group-horizontal-md navbar-nav mr-auto mt-2 mt-lg-0 " style="font-size: 16px">
+                    <li class="list-group-item"><a href="start.html">Start Here</a></li>
+                    <li class="list-group-item"><a href="about.html">About Us</a></li>
+                    <li class="list-group-item"><a href="services.html">Our Services</a></li>
+                    <li class="list-group-item"><a href="help.html">Online Help</a></li>
+                    <li class="list-group-item"><a href="d_proceedings.html">Divorce Proceedings</a></li>
+                    <li class="list-group-item"><a href="c_proceedings.html">Custody Proceedings</a></li>
+                    <li class="list-group-item"><a href="team.html">Our Team</a></li>
+                    <li class="list-group-item"><a href="faqs.html">FAQs</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body>
+<h2>Frequently Asked Questions</h2>
+
+<div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol viewBox="0 0 24 24" id="expand-more">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="close">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+        </symbol>
+    </svg>
+</div>
+
+<details>
+    <summary>
+        Are all services Low Cost?
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Yes! The purpose for this company is to offer services at low cost for people who cannot afford an attorney.</p>
+</details>
+
+<details>
+
+    <summary>
+        Are there any online services offered?
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Yes! </p>
+</details>
+
+<details>
+    <summary>
+        Should I chose Attorney's even if I can afford a normal cost service?
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Besides offering low-cost services with people who may choose not to have representation at court when going through custody or divorce proceedings. </p>
+</details>
+<details>
+    <summary>
+        Is it worth fighting for divorce settlement?
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>If you have any of the following: Children under the age of 18 or joint assets that could be at risk; you deserve the chance to get win these in a divorce settlement.  </p>
+</details>
+<br>
+<div>
+    <h5 style="text-align: center">
+        Cannot find your answers? <a href="contact.html">Contact Us</a>
+    </h5>
+</div>
+</body>
+<br><br><br><br>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Attorney's is a business which offers online services at low cost for people who cannot afford an attorney or they may just choose not to have representation at court when going through custody or divorce proceedings. </p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                    <a href="#">Zyad Khan</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li ><a href="index.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

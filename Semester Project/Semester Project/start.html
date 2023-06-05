@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Here</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .site-footer
+        {
+            background-color:#33353d;
+            padding:45px 0 20px;
+            font-size:15px;
+            line-height:24px;
+            color:white;
+        }
+        .site-footer hr
+        {
+            border-top-color:#bbb;
+            opacity:0.5
+        }
+        .site-footer hr.small
+        {
+            margin:20px 0
+        }
+        .site-footer h6
+        {
+            color:white;
+            font-size:16px;
+            text-transform:uppercase;
+            margin-top:5px;
+            letter-spacing:2px
+        }
+        .site-footer a
+        {
+            color:white;
+        }
+        .site-footer a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:none
+        }
+        .footer-links li
+        {
+            display:block
+        }
+        .footer-links a
+        {
+            color:white;
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color: white;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block
+        }
+        .site-footer .social-icons
+        {
+            text-align:right
+        }
+        .site-footer .social-icons a
+        {
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:6px;
+            margin-right:0;
+            border-radius:100%;
+            background-color: grey;
+        }
+        .copyright-text
+        {
+            margin:0
+        }
+        @media (max-width:991px)
+        {
+            .site-footer [class^=col-]
+            {
+                margin-bottom:30px
+            }
+        }
+        @media (max-width:767px)
+        {
+            .site-footer
+            {
+                padding-bottom:0
+            }
+            .site-footer .copyright-text,.site-footer .social-icons
+            {
+                text-align:center
+            }
+        }
+        .social-icons
+        {
+            padding-left:0;
+            margin-bottom:0;
+            list-style:none
+        }
+        .social-icons li
+        {
+            display:inline-block;
+            margin-bottom:4px
+        }
+        .social-icons li.title
+        {
+            margin-right:15px;
+            text-transform:uppercase;
+            color:white;
+            font-weight:700;
+            font-size:13px
+        }
+        .social-icons a{
+            background-color:#eceeef;
+            color:white;
+            font-size:16px;
+            display:inline-block;
+            line-height:44px;
+            width:44px;
+            height:44px;
+            text-align:center;
+            margin-right:8px;
+            border-radius:100%;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+        {
+            color:#fff;
+            background-color:#29aafe
+        }
+        .social-icons.size-sm a
+        {
+            line-height:34px;
+            height:34px;
+            width:34px;
+            font-size:14px
+        }
+        .social-icons a.facebook:hover
+        {
+            background-color:#3b5998
+        }
+        .social-icons a.twitter:hover
+        {
+            background-color:#00aced
+        }
+        .social-icons a.linkedin:hover
+        {
+            background-color:#007bb6
+        }
+        .social-icons a.fa-instagram:hover
+        {
+            background-color:#ea4c89
+        }
+        @media (max-width:767px)
+        {
+            .social-icons li.title
+            {
+                display:block;
+                margin-right:0;
+                font-weight:600
+            }
+        }
+        .dark-mode {
+            background-color: #1d1d1d;
+            color: white;
+
+        );
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+
+<header>
+    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light" style="background: #e3f2fd;">
+        <a class="navbar-brand" href="index.html" style="font-size: 28px">
+            <img src="https://michiganhr.org/wp-content/uploads/2015/01/insert-logo-375x360.png" alt="Logo" style="width:55px;">
+            &nbsp; Attorney's Website
+        </a>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <button class="btn btn-secondary btn-sm " onclick="myFunction()">Dark Mode</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="navbar-nav ml-auto">
+                <ul class="list-group list-group-horizontal-md navbar-nav mr-auto mt-2 mt-lg-0 " style="font-size: 16px">
+                    <li class="list-group-item"><a href="start.html">Start Here</a></li>
+                    <li class="list-group-item"><a href="about.html">About Us</a></li>
+                    <li class="list-group-item"><a href="services.html">Our Services</a></li>
+                    <li class="list-group-item"><a href="help.html">Online Help</a></li>
+                    <li class="list-group-item"><a href="d_proceedings.html">Divorce Proceedings</a></li>
+                    <li class="list-group-item"><a href="c_proceedings.html">Custody Proceedings</a></li>
+                    <li class="list-group-item"><a href="team.html">Our Team</a></li>
+                    <li class="list-group-item"><a href="faqs.html">FAQs</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body>
+<div>
+    <img src="https://michiganhr.org/wp-content/uploads/2015/01/insert-logo-375x360.png" style="float: right; width: auto; height: auto;z-index: 0; position: relative  ">
+</div>
+    <div class="clearfix" style="height:85px"></div>
+    <div class="col-md-12 homepage-content" style="left: 78px; font-family: Dubai">
+        <h1 style="font-weight: bold; color: orange;z-index: 1" >
+            Start Here
+        </h1>
+
+    </div>
+
+    <div class="col-md-12 homepage-content" style="left: 78px">
+
+    <br><br>
+        <h2 style="font-weight: bold ">
+            Welcome to the Attorney's Firm
+        </h2>
+        <h5>
+            Attorney's is the product of collaboration between 6 attorneys whose goal is to provide legal advice and guidance to those who cannot afford
+            <br> the high costing charges from other legal advisors.
+            <br> <br>Additionally Attorney's was founded for anyone who may just choose not to have representation at court when going through custody or
+            <br>divorce proceedings.
+            <br> <br>
+            Founded in 2022, the firm has the standard of delivering high quality services always at a low cost. Every case or trial is different, which is <br>
+            why we provide the lawyer guidance and advice that is necessary for you. This includes lawyer guidance and advice through the litigation <br>
+            process if you chose to represent yourself in court.
+        </h5>
+        <br> <br>
+        <h2 style="font-weight: bold ">
+            Why Should I Represent Myself In Court?
+        </h2>
+        <h5>
+            Attorney's believes that there are benefits to representing yourself in court which include:
+            <br><br>
+            <ol>
+                <li>Having the ability to pick your main issues and make your own arguments</li>
+                <li>The price to hire an attorney or lawyer to represent you may be high especially since cases may take a long time.</li>
+                <li>You have the right to represent yourself if you choose so.</li>
+                <li>Only you know the most about yourself, which is why it is truly up to you. </li>
+            </ol>
+            <br>
+            And no matter what, Attorney's will provide you with lawyer guidance and advice throughout the litigation process. If you need any immediate
+            <br> assistance, please contact us and provide more information. We will be able to get a reply within 2 or 3 business days.
+        <br> <br>
+
+        <h2 style="font-weight: bold ">
+            More Information And Resources
+        </h2>
+        <h5>
+            <style>
+                li span{
+                    ;
+                }
+            </style>
+            <ul style="line-height: 40px">
+                <li style="color: orange"><span>Start <a href="faqs.html">here</a> to review our Frequently Asked Questions and Answers.</span></li>
+                <li style="color: orange"><span>Start <a href="services.html">here</a> to review our offered services.</span></li>
+                <li style="color: orange"><span>Start <a href="contact.html">here</a> to contact us with any personalized questions.</span></li>
+            </ul>
+        </h5>
+        </h5>
+    </div>
+</body>
+
+<footer style="background: orange; position: center">
+    <p style="text-align: center">
+        Reach out to us via Phone!
+
+    <button style="text-align: center;justify-content: center; align-items: center; display: flex;margin: 0 auto"> <a href="tel:123-456-7890">Call Us (Temporary Number)</a> </button>
+        <br>
+    </p>
+</footer>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Attorney's is a business which offers online services at low cost for people who cannot afford an attorney or they may just choose not to have representation at court when going through custody or divorce proceedings. </p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                    <a href="#">Zyad Khan</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li ><a href="index.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

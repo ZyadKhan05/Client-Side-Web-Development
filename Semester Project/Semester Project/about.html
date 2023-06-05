@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        section {
+            padding: 60px 0;
+            /* min-height: 100vh;*/
+        }
+
+        .sec-title{
+            position:relative;
+            z-index: 1;
+            margin-bottom:60px;
+        }
+
+        .sec-title .title{
+            position: relative;
+            display: block;
+            font-size: 34px;
+            line-height: 24px;
+            color: orange;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .sec-title h2{
+            position: relative;
+            display: block;
+            font-size:40px;
+            line-height: 1.28em;
+            font-weight: 600;
+            padding-bottom:18px;
+        }
+
+        .sec-title h2:before{
+            position:absolute;
+            content:'';
+            left:0px;
+            bottom:0px;
+            width:50px;
+            height:3px;
+            background-color:#d1d2d6;
+        }
+
+        .sec-title .text{
+            position: relative;
+            font-size: 16px;
+            line-height: 26px;
+            color: #848484;
+            font-weight: 400;
+            margin-top: 35px;
+        }
+
+        .sec-title.light h2{
+            color: #ffffff;
+        }
+
+        .sec-title.text-center h2:before{
+            left:50%;
+            margin-left: -25px;
+        }
+
+        .list-style-one{
+            position:relative;
+        }
+
+        .list-style-one li{
+            position:relative;
+            font-size:16px;
+            line-height:20px;
+            font-weight:400;
+            padding-left:35px;
+            margin-bottom: 12px;
+        }
+
+        .list-style-one li:before {
+            content: "\f058";
+            position: absolute;
+            left: 0;
+            top: 0px;
+            display: block;
+            font-size: 18px;
+            padding: 0px;
+            color: orange;
+            font-weight: 600;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1.6;
+        }
+
+        .list-style-one li a:hover{
+            color: #44bce2;
+        }
+
+        .btn-style-one{
+            position: relative;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 30px;
+            padding: 10px 30px;
+            font-weight: 600;
+            overflow: hidden;
+            letter-spacing: 0.02em;
+            background-color: orange;
+        }
+
+        .btn-style-one:hover{
+            background-color: #001e57;
+        }
+        .about-section{
+            position: relative;
+            padding: 120px 0 70px;
+        }
+
+        .about-section .sec-title{
+            margin-bottom: 45px;
+        }
+
+        .about-section .content-column{
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .about-section .content-column .inner-column{
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .about-section .text{
+            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+
+        .about-section .list-style-one{
+            margin-bottom: 45px;
+        }
+
+        .about-section .btn-box{
+            position: relative;
+        }
+
+        .about-section .btn-box a{
+            padding: 15px 50px;
+        }
+
+        .about-section .image-column{
+            position: relative;
+        }
+
+        .about-section .image-column .text-layer{
+            position: absolute;
+            right: -110px;
+            top: 50%;
+            font-size: 325px;
+            line-height: 1em;
+            color: #ffffff;
+            margin-top: -175px;
+            font-weight: 500;
+        }
+
+        .about-section .image-column .inner-column{
+            position: relative;
+            padding-left: 120px;
+            padding-bottom: 125px;
+        }
+
+        .about-section .image-column .inner-column:before{
+            position: absolute;
+            left: -75px;
+            top: 65px;
+            height: 520px;
+            width: 520px;
+            background-image:url(https://i.ibb.co/fxJ1jtC/about-circle-1.png);
+            content: "";
+        }
+
+        .about-section .image-column .image-1{
+            position: relative;
+        }
+
+        .about-section .image-column .image-2{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .about-section .image-column .image-2 img,
+        .about-section .image-column .image-1 img{
+            box-shadow: 0 30px 50px rgba(8,13,62,.15);
+        }
+
+        .about-section .image-column .video-link{
+            position: absolute;
+            left: 70px;
+            top: 170px;
+        }
+        .site-footer
+        {
+            background-color:#33353d;
+            padding:45px 0 20px;
+            font-size:15px;
+            line-height:24px;
+            color:white;
+        }
+        .site-footer hr
+        {
+            border-top-color:#bbb;
+            opacity:0.5
+        }
+        .site-footer hr.small
+        {
+            margin:20px 0
+        }
+        .site-footer h6
+        {
+            color:white;
+            font-size:16px;
+            text-transform:uppercase;
+            margin-top:5px;
+            letter-spacing:2px
+        }
+        .site-footer a
+        {
+            color:white;
+        }
+        .site-footer a:hover
+        {
+            color:#3366cc;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:none
+        }
+        .footer-links li
+        {
+            display:block
+        }
+        .footer-links a
+        {
+            color:white;
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color: white;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block
+        }
+        .site-footer .social-icons
+        {
+            text-align:right
+        }
+        .site-footer .social-icons a
+        {
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:6px;
+            margin-right:0;
+            border-radius:100%;
+            background-color: grey;
+        }
+        .copyright-text
+        {
+            margin:0
+        }
+        @media (max-width:991px)
+        {
+            .site-footer [class^=col-]
+            {
+                margin-bottom:30px
+            }
+        }
+        @media (max-width:767px)
+        {
+            .site-footer
+            {
+                padding-bottom:0
+            }
+            .site-footer .copyright-text,.site-footer .social-icons
+            {
+                text-align:center
+            }
+        }
+        .social-icons
+        {
+            padding-left:0;
+            margin-bottom:0;
+            list-style:none
+        }
+        .social-icons li
+        {
+            display:inline-block;
+            margin-bottom:4px
+        }
+        .social-icons li.title
+        {
+            margin-right:15px;
+            text-transform:uppercase;
+            color:white;
+            font-weight:700;
+            font-size:13px
+        }
+        .social-icons a{
+            background-color:#eceeef;
+            color:white;
+            font-size:16px;
+            display:inline-block;
+            line-height:44px;
+            width:44px;
+            height:44px;
+            text-align:center;
+            margin-right:8px;
+            border-radius:100%;
+            -webkit-transition:all .2s linear;
+            -o-transition:all .2s linear;
+            transition:all .2s linear
+        }
+        .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+        {
+            color:#fff;
+            background-color:#29aafe
+        }
+        .social-icons.size-sm a
+        {
+            line-height:34px;
+            height:34px;
+            width:34px;
+            font-size:14px
+        }
+        .social-icons a.facebook:hover
+        {
+            background-color:#3b5998
+        }
+        .social-icons a.twitter:hover
+        {
+            background-color:#00aced
+        }
+        .social-icons a.linkedin:hover
+        {
+            background-color:#007bb6
+        }
+        .social-icons a.fa-instagram:hover
+        {
+            background-color:#ea4c89
+        }
+        @media (max-width:767px)
+        {
+            .social-icons li.title
+            {
+                display:block;
+                margin-right:0;
+                font-weight:600
+            }
+        }
+
+        .dark-mode {
+            background-color: #1d1d1d;
+            color: white;
+
+        );
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+
+<header>
+    <nav id="navbar_top" class="navbar navbar-expand-lg  navbar-light" style="background: #e3f2fd;">
+        <a class="navbar-brand" href="index.html" style="font-size: 28px">
+            <img src="https://michiganhr.org/wp-content/uploads/2015/01/insert-logo-375x360.png" alt="Logo" style="width:55px;">
+            &nbsp; Attorney's Website
+        </a>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <button class="btn btn-secondary btn-sm " onclick="myFunction()">Dark Mode</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="navbar-nav ml-auto">
+                <ul class="list-group list-group-horizontal-md navbar-nav mr-auto mt-2 mt-lg-0 " style="font-size: 16px">
+                    <li class="list-group-item"><a href="start.html">Start Here</a></li>
+                    <li class="list-group-item"><a href="about.html">About Us</a></li>
+                    <li class="list-group-item"><a href="services.html">Our Services</a></li>
+                    <li class="list-group-item"><a href="help.html">Online Help</a></li>
+                    <li class="list-group-item"><a href="d_proceedings.html">Divorce Proceedings</a></li>
+                    <li class="list-group-item"><a href="c_proceedings.html">Custody Proceedings</a></li>
+                    <li class="list-group-item"><a href="team.html">Our Team</a></li>
+                    <li class="list-group-item"><a href="faqs.html">FAQs</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body>
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                <div class="inner-column">
+                    <div class="sec-title">
+                        <span class="title">About Us</span>
+                        <h2>We are Attorneys <br> for Low Cost</h2>
+                    </div>
+                    <div class="text">We are the most reliable attorneys for the lowest cost. <br> Some of the few things that we offer are: </div>
+                    <ul class="list-style-one">
+                        <li>Completion of forms</li>
+                        <li>Filing motions</li>
+                        <li>Lawyer guidance and advice </li>
+                    </ul>
+                    <div class="text">Why do we offer low-cost services?  </div>
+                    <ul class="list-style-one">
+                        <li>Placeholder for Answer</li>
+                    </ul>
+                    <div class="btn-box">
+                        <a href="contact.html" class="theme-btn btn-style-one">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column wow fadeInLeft">
+                    <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg" alt="" onmouseover="this.src='https://cdn.dribbble.com/users/6429129/screenshots/15279050/law_firm_logo.png'" onmouseleave="this.src= 'https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/law-firm-logo.jpg'"></a></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Attorney's is a business which offers online services at low cost for people who cannot afford an attorney or they may just choose not to have representation at court when going through custody or divorce proceedings. </p>
+                <p class="text-justify">Contact Us: <br>
+                    Phone Number: 123-456-7890 <br>
+                    Email Address: attorneys@example.com
+                </p>
+
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                    <a href="#">Zyad Khan</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12" onmouseover="search_bar_fb()">
+                <ul class="social-icons">
+                    <li ><a href="index.html" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="index.html" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
