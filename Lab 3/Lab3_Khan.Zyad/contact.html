@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page of Khan's Cookies</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+
+    </head>
+    <h1>
+        <p id="header">Khan's Cookies</p>
+    </h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://static.vecteezy.com/system/resources/previews/003/789/380/original/homemade-oatmeal-cookie-with-chocolate-crumb-flat-style-traditional-chocolate-chip-cookie-for-logo-sticker-print-recipe-menu-package-bakery-design-and-decoration-vector.jpg" alt="Logo" style="width: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+      
+
+<body>
+    <div class="card text-center"  style="width: 100% ; display:flex;"  >
+        <h2 class="card-header">Leave us a comment below!</h2>
+        <form class="card-body">
+            <textarea id="" class="form-control" placeholder="Leave a message..." value=""></textarea>
+            <div class="btn">
+                <input id="submitBtn" type="submit" value="Comment" >
+                <button id="clearBtn" type="reset">&#10060;</button>
+            </div>
+        </form>
+    </div>
+    <div style="background-color: #F6F6F8; height: auto; text-align: center; " class="form-floating" class="comments" >
+        <h2>Comments Section</h2>
+        <div id="comment-box" style="text-align:left; padding-left: 10px;">
+        </div>
+    </div>
+</body>
+</html>

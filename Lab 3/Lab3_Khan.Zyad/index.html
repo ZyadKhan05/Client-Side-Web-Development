@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <title>Home Page of Khan's Cookies</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>       
+    </head>
+    <h1>
+        <p id="header">Khan's Cookies</p>
+    </h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://static.vecteezy.com/system/resources/previews/003/789/380/original/homemade-oatmeal-cookie-with-chocolate-crumb-flat-style-traditional-chocolate-chip-cookie-for-logo-sticker-print-recipe-menu-package-bakery-design-and-decoration-vector.jpg" alt="Logo" style="width:55px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item " aria-current="page" >Home</li>
+        </ol>
+      </nav>
+       </header>
+       <br><br>
+    <h2>
+        <p style="text-align:center ;">The best tasting cookies that are straight fresh out of the oven!</p>
+        <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2017/07/1C5A8967.jpg" class="img-fluid mx-auto d-block" id="image" onmouseover="mouseOverImage();" onmouseout="mouseOutImage();" >
+    </h2>
+    <br>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+
+
+    <div class="card text-center"   id="myDiv" onclick="colorDiv()" style="border: 3px violet; display: flex; border-style: dashed;" >
+    <h2 class="card-header" style="text-align: center;;" >Khan's Promises</h2>
+    <div class="card-body">
+        <ul id="myList" style="text-align: left;">
+            <li class="list"><em>All</em> of our cookies are freshly baked</li>
+            <li class="list">Every ingredient that we use is <strong>100% natural</strong></li>
+            <li class="list">All our cookies are made with love</li>
+            <li class="list">Our cookies guarantee smiles for a lifetime (not guaranteed)</li>
+        </ul>
+    </div>
+    </div>
+    <br>
+    <h3>
+        <img src="https://static.vecteezy.com/system/resources/previews/003/789/380/original/homemade-oatmeal-cookie-with-chocolate-crumb-flat-style-traditional-chocolate-chip-cookie-for-logo-sticker-print-recipe-menu-package-bakery-design-and-decoration-vector.jpg" alt="cookies" class="img-fluid mx-auto d-block" style="height:100px; width: 10%;">
+        <button class="button" onclick="button();">View our Cookies</button> <br>
+        <table  class="table table-hover table-striped table-dark"  id="myTable">
+            <tr>
+                <th onclick="sortTable(0)">Cookie</th>
+                <th onclick="sortTable(1)">Price</th>
+                <th onclick="sortTable(2)">Calories</th>
+            </tr>
+            <tr>
+                <td>Chocolate Chip</td>
+                <td>$6 per dozen</td>
+                <td>78 calories per cookie</td>
+            </tr>
+            <tr>
+                <td>Oatmeal Raisin Cookie</td>
+                <td>$8 per dozen</td>
+                <td>65 calories per cookie</td>
+            </tr>
+            <tr>
+                <td>Snickerdoodle</td>
+                <td>$10 per dozen</td>
+                <td>90 calories per cookie</td>
+            </tr>
+            <tr>
+                <td>Gingersnaps</td>
+                <td>$3 per dozen</td>
+                <td>29 calories per cookie</td>
+            </tr>
+        </table>
+        <br>
+
+    </h3>
+
+    <br>
+    <hr id="digitalClock">
+</html>
