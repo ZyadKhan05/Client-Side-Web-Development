@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Home Page of Khan's Cookies</title>
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    </head>
+    <header>
+        <div id="header"></div>
+        <nav id="navbar_top" class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://static.vecteezy.com/system/resources/previews/003/789/380/original/homemade-oatmeal-cookie-with-chocolate-crumb-flat-style-traditional-chocolate-chip-cookie-for-logo-sticker-print-recipe-menu-package-bakery-design-and-decoration-vector.jpg" alt="Logo" style="width:55px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <div class="navbar-nav">
+                    <ul class="list-group list-group-horizontal-md navbar-nav mr-auto mt-2 mt-lg-0 ">
+                        <li class="list-group-item"><a href="index.html">Home</a> </li>
+                        <li class="list-group-item active"><a href="about.html">About Us</a></li>
+                        <li class="list-group-item"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+          </nav>
+    </header>
+      <body>
+        <h2>
+            <div class="card">
+              <h3 class="card-header">Who Are We?</h3>
+                <h4 class="card-body">Khan's Cookies is a local cookie bakery in Carroll County Maryland. </h4>
+                <h4 class="card-body">Khan's Cookies was founded and envisioned by Zyad Khan who believed that everyone needs a cookie! </h4>
+                <h4 class="card-body">In order to give back to the community, Khan's Cookies pledges a whopping 0% of all sales to go to local organizations. This is because we make absolutely no money at all!  </h4>
+                <br>
+                <!-- Popover for alert -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $('[data-toggle="popover"]').popover({
+                            placement : 'top',
+                            trigger : 'hover'
+                        });
+                    });
+                </script>
+
+
+                <div class="card text-center"  id="myDiv2" onclick="colorDiv2()" style="background-color: lightgray; border: 5px red; border-style: double; width: 50%; display: flex; margin-left: auto; margin-right: auto;">
+                    <h5 class="card-header" style="text-align: left;" >The History of Cookies</h5>
+                    <div class="card-body" style="text-align: center;">
+                        <a href="https://en.wikipedia.org/wiki/Cookie"  onclick="pop_up()" target="_blank" type="button" class="btn btn-primary" data-toggle="popover" title="Warning:  An external website will open when clicking on this link." data-content="Warning: An external website will open when clicking on this link." >Do you want to learn about the history of the cookie? Click here!</button></a>
+                    </div>
+                </div>
+            </div>
+        </h2>
+
+        <br><br>
+        <div class="card text-center"  style="width: 100% ; display:flex;"  >
+            <h2 class="card-header">Leave us a comment below!</h2>
+            <form class="card-body">
+                <textarea id="" class="form-control" placeholder="Leave a message..." value=""></textarea>
+                <div class="btn">
+                    <input id="submitBtn" type="submit" value="Comment" >
+                    <button id="clearBtn" type="reset">&#10060;</button>
+                </div>
+            </form>
+        </div>
+        <div style="background-color: #F6F6F8; height: auto; text-align: left; " class="form-floating" class="comments" >
+            <h2>&nbsp Comments </h2>
+            <div id="comment-box" style="text-align:left; padding-left: 10px;">
+            </div>
+        </div>
+        <hr id="footer">
+        <script defer src="./js/header.js"></script>
+        <script defer src="./js/footer.js"></script>
+      </body>
+
+</html>
